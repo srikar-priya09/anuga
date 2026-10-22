@@ -1,5 +1,25 @@
 # Handoff
 
+## Consolidated reverse-engineering review (2026-10-22)
+
+Delivered the single [ANUGA_FINDINGS.md](../ANUGA_FINDINGS.md), based on source
+`de28006`, the earlier local findings, and pinned REA/reverse-engineering skill guidance.
+Includes architecture/data maps, the 37 application-function inventory, access and
+feature traces, F01-F08, synthetic reproduction source/results, and acceptance checks.
+No fixes, migration, hosted target change or production launch is included.
+
+Fresh consolidated in-memory probes reproduced all eight observations: training,
+withdrawn visit consent, premature start, out-of-window event-note reads, conflicting
+assignments, suspended companion actions, missing completion note, and historical repricing.
+The report distinguishes these local observations from static risks and hosted unknowns.
+
+Earlier same-source checks on 2026-10-22: root TypeScript pass; database suite 142 pass / 8
+real-platform skips; ops 52 pass; ops typecheck/lint/production build pass. Before this PR,
+`bash scripts/check-all.sh` and the prescribed ops pnpm checks were attempted but stopped
+at pnpm's dependency preflight (`ERR_PNPM_ABORTED_REMOVE_MODULES_DIR_NO_TTY`). Flutter,
+Dart and Docker unavailable; native and real-Supabase journeys not rerun. Markdown/source
+references and whitespace checked. M9a/M10 remain open/gated; remediation is proposed only.
+
 ## Architecture walkthrough (2026-10-20)
 
 Added `docs/ARCHITECTURE.md`, written from the code on main (64c4603). It covers the

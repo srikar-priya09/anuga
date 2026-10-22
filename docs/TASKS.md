@@ -1,5 +1,18 @@
 # Tasks and milestones
 
+## Reverse-engineering documentation (2026-10-22)
+
+- [x] Consolidate the earlier findings with pinned REA/reverse-engineering skill methods
+      into [ANUGA_FINDINGS.md](../ANUGA_FINDINGS.md), including source/evidence traceability.
+- [x] Rerun eight isolated synthetic observations; record results and reproduction source.
+- [ ] Implement and verify F01-F08 remediation; acceptance cases are in the report.
+- [ ] Complete native/device, real-Supabase and current hosted verification.
+
+Documentation only. Earlier same-source database 142 pass / 8 skips, ops 52 pass,
+TypeScript/lint/ops build pass. Pre-PR aggregate and prescribed ops pnpm commands were
+attempted but stopped at dependency preflight with `ERR_PNPM_ABORTED_REMOVE_MODULES_DIR_NO_TTY`;
+Flutter/Dart/Docker unavailable. This review does not close M9a or the M10 launch gate.
+
 ## Founder sketch UI streams (2026-10-11)
 
 - [x] S2: inspect all 15 concept boards and seven previous ops screenshots; preserve source boards; define tokens and existing-screen mappings in `docs/design/tokens.md`.
